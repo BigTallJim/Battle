@@ -16,20 +16,12 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    p $player1
-    @player1 = $player1.name
-    @player2 = $player2.name
-    @hp1 = 10
-    @hp2 = 10
     erb(:play)
   end
 
   post '/play' do
-    @player1 = $player1.name
-    @player2 = $player2.name
+    $player2.reduce_hp(10)
     @confirmation = "Attack successful"
-    @hp1 = 10
-    @hp2 = 10
     erb(:play)
   end
 
