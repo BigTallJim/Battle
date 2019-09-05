@@ -1,9 +1,21 @@
 <form method='post'>
-  <h1>
-    Player: <%= $player1.name %> - hit points:  <%= $player1.hp %>  Player: <%= $player2.name %> - hit points: <%= $player2.hp %>
-    <input type='submit' value='P1-Attack'>
-  </h1>
+    <table>
+      <tr>
+        <td><h2>Player 1: <%= $player1.name %> - hit points:  <%= $player1.hp %></h2></td>
+        <td><button style='width:100px; height:100px;' type="submit" value='P1-Attack'>
+          ATTACK
+        </button></td>
+      </tr>
 
-  <%= @confirmation %>
+
+      <tr>
+        <td><h2>Player 2: <%= $player2.name %> - hit points: <%= $player2.hp %></h2></td>
+        <td><button style='width:100px; height:100px;' type="submit" value='P2-Attack'>
+          ATTACK
+        </button></td>
+      </tr>
+      </table>
+
+  <h1><%= @confirmation %></h1>
 
 </form>
