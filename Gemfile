@@ -6,4 +6,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
   gem 'rubocop', '0.56.0'
+  gem 'shotgun'
 end
