@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/player'
+require './lib/game'
 
 class Battle < Sinatra::Base
 
@@ -20,7 +21,7 @@ class Battle < Sinatra::Base
   end
 
   post '/play' do
-    $player2.reduce_hp(10)
+    Game.new.attack($player2)
     @confirmation = "Attack successful"
     erb(:play)
   end
