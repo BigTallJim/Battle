@@ -21,7 +21,12 @@ class Battle < Sinatra::Base
   end
 
   post '/play' do
-    Game.new.attack($player2)
+    p params
+    if params[:P1Attack] == "P1-Attack"
+      Game.new.attack($player2)
+    else
+      Game.new.attack($player1)
+    end
     @confirmation = "Attack successful"
     erb(:play)
   end
